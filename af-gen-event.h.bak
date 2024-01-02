@@ -16,16 +16,12 @@
   extern EmberEventControl emberAfPluginReportingTickEventControl; \
   extern EmberEventControl emberAfPluginScanDispatchScanEventControl; \
   extern EmberEventControl emberAfPluginUpdateTcLinkKeyBeginTcLinkKeyUpdateEventControl; \
-  extern EmberEventControl led1ToggleEventControl; \
-  extern EmberEventControl led2ToggleEventControl; \
   extern void emberAfPluginInterpanFragmentReceiveEventHandler(void); \
   extern void emberAfPluginInterpanFragmentTransmitEventHandler(void); \
   extern void emberAfPluginNetworkSteeringFinishSteeringEventHandler(void); \
   extern void emberAfPluginReportingTickEventHandler(void); \
   extern void emberAfPluginScanDispatchScanEventHandler(void); \
   extern void emberAfPluginUpdateTcLinkKeyBeginTcLinkKeyUpdateEventHandler(void); \
-  extern void led1ToggleEventHandle(void); \
-  extern void led2ToggleEventHandle(void); \
   static void clusterTickWrapper(EmberEventControl *control, EmberAfTickFunction callback, uint8_t endpoint) \
   { \
     emberAfPushEndpointNetworkIndex(endpoint); \
@@ -45,8 +41,6 @@
   { &emberAfPluginReportingTickEventControl, emberAfPluginReportingTickEventHandler }, \
   { &emberAfPluginScanDispatchScanEventControl, emberAfPluginScanDispatchScanEventHandler }, \
   { &emberAfPluginUpdateTcLinkKeyBeginTcLinkKeyUpdateEventControl, emberAfPluginUpdateTcLinkKeyBeginTcLinkKeyUpdateEventHandler }, \
-  { &led1ToggleEventControl, led1ToggleEventHandle }, \
-  { &led2ToggleEventControl, led2ToggleEventHandle }, \
 
 
 #define EMBER_AF_GENERATED_EVENT_STRINGS   \
@@ -57,8 +51,6 @@
   "Reporting Plugin Tick",  \
   "Scan Dispatch Plugin Scan",  \
   "Update TC Link Key Plugin BeginTcLinkKeyUpdate",  \
-  "Event data",  \
-  "Event data",  \
 
 
 // The length of the event context table used to track and retrieve cluster events

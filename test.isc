@@ -53,6 +53,8 @@ enable,DEBUG
 enable,ZDO
 }
 {setupId:eventConfiguration
+led1ToggleEventControl,led1ToggleEventHandle
+led2ToggleEventControl,led2ToggleEventHandle
 }
 {setupId:halOptions
 }
